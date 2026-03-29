@@ -1,16 +1,20 @@
-# React + Vite
+# Учебный проект "Mood movies" на React JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Основная идея
 
-Currently, two official plugins are available:
+Mood Movies - приложение, позволяющее пользователю составлять список фильмов, которые он хотел бы посмотреть или уже посмотрел, с привзякой к эмоциям, которые зритель испытывает при просмотре.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Возможности приложения
 
-## React Compiler
+- Просмотр список фильмов;
+- Поиск фильма при вводе (без нажатия на дополнительные кнопки);
+- Фильтрация фильмов;
+- Добавление новых фильмов в список (в открывающейся по кнопке с иконкой "+" модальной форме);
+- Проставление отметки о том, что фильм уже просмотрен;
+- Удаление фильма из списка
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Что используется?
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+В проекте используется vite + React JS + CSS.
+Использованы: useState, useEffect, работа с формами, передача данных через props.
+Список фильмов пишется и обновляется в локальном хранилище (localStorage) браузера, что позволяет вернуться к списку даже после закрытия вкладки и браузера.
