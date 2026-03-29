@@ -1,0 +1,33 @@
+.mood-movies__add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: var(--input-height);
+    height: var(--input-height);
+    background-color: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin-left: auto;
+
+    span {
+        display: block;
+        pointer-events: none;
+        width: 20px;
+        height: 3px;
+        background-color: blue;
+
+        &:nth-child(2){
+            margin-top: -3px;
+            transform: rotateZ(90deg);
+        }
+    }
+
+    &:hover {
+        background-color: var(--light-gray);
+    }
+
+    &:active {
+        scale: 1.05;
+    }
+}

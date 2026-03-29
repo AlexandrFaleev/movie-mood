@@ -1,0 +1,26 @@
+.mood-movies__filters {
+    display: grid;
+    row-gap: 15px;
+}
+
+.filters__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.filter__item {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: transparent;
+
+    &:not(.selected):hover {
+        background-color: var(--light-gray);
+    }
+
+    &.selected {
+        background-color: var(--medium-gray);
+    }
+}

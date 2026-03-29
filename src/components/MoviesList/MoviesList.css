@@ -1,0 +1,10 @@
+.mood-movies__empty-message {
+    text-align: center;
+    color: var(--medium-gray);
+    font-size: 20px;
+}
+
+.mood-movies__list {
+    display: grid;
+    row-gap: 10px;
+}

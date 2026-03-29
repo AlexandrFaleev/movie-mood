@@ -1,0 +1,17 @@
+:root {
+    --black: #000000;
+    --light-gray: #DDDDDD;
+    --medium-gray: #a8a6a6;
+    --dark-gray: #808080;
+    --white: #FFFFFF;
+
+    --border: 1px solid var(--medium-gray);
+    --border-radius: 8px;
+
+    --transition-duration: .2s;
+
+    --input-height: 40px;
+    --input-padding-x: 16px;
+
+    --font: 'Arial', 'Helverice', sans-serif;
+}
