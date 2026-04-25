@@ -1,17 +1,19 @@
 import {Field} from "../Field/Field.jsx";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import './AddMovieModal.css'
+import {MoodMovieContext} from "../../context/MoodMovieContext.jsx";
 
-export const AddMovieModal = (props) => {
+export const AddMovieModal = () => {
     const {
         onCloseButtonClick,
         onAddNewMovie,
         filtersList
-    } = props
+    } = useContext(MoodMovieContext)
 
     const [formData, setFormData] = useState({
         title: '',
-        mood: ''
+        mood: '',
+        desc: ''
     })
 
     const handleChange = (e) => {
@@ -36,7 +38,7 @@ export const AddMovieModal = (props) => {
                     <span></span>
                     <span></span>
                 </button>
-                <h2 className="form__title">Тут добавление нового фильма</h2>
+                <h2 className="form__title">Добавление фильма</h2>
                 <Field
                     name="title"
                     id="new-movie"
@@ -56,6 +58,24 @@ export const AddMovieModal = (props) => {
                         </option>
                     ))}
                 </select>
+                <div
+                    className="form__description"
+                >
+                    <label
+                        htmlFor="film-desc"
+                        className="description__label"
+                    >
+                        Описание:
+                    </label>
+                    <textarea
+                        id="film-desc"
+                        name="desc"
+                        className="description__textarea"
+                        onChange={handleChange}
+                        placeholder=" "
+                        rows="5"
+                    />
+                </div>
                 <button
                     type="submit"
                     className="form__add-movie-button"

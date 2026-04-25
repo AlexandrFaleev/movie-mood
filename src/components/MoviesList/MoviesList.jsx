@@ -1,13 +1,17 @@
 import './MoviesList.css';
 import {MovieItem} from "../MovieItem/MovieItem.jsx";
+import {useContext} from "react";
+import {MoodMovieContext} from "../../context/MoodMovieContext.jsx";
+import { Link } from "react-router-dom";
 
-export const MoviesList = (props) => {
+
+export const MoviesList = () => {
     const {
         movies,
         filteredMovies,
         onDeleteButtonClick,
         onStatusChange
-    } = props
+    } = useContext(MoodMovieContext)
 
     if(movies.length === 0) return <h2 className="mood-movies__empty-message">Вы еще не добавляли фильмы</h2>
 

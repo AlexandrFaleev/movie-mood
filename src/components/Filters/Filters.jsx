@@ -1,14 +1,16 @@
 import {Field} from "../Field/Field.jsx";
 import './Filters.css';
+import {useContext} from "react";
+import {MoodMovieContext} from "../../context/MoodMovieContext.jsx";
 
-export const Filters = (props) => {
+export const Filters = () => {
     const {
-        filters,
+        filtersList,
         searchFilmName,
         onSearchFilmInput,
         selectedFilter,
         onFilterClick
-    } = props
+    } = useContext(MoodMovieContext)
 
     return (
         <div className="mood-movies__filters">
@@ -21,7 +23,7 @@ export const Filters = (props) => {
                 onInput={onSearchFilmInput}
             />
             <div className="filters__list">
-                {filters.map(item => (
+                {filtersList.map(item => (
                     <button
                         id={item.mood}
                         key={item.mood}

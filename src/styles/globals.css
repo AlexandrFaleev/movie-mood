@@ -30,3 +30,6 @@ label {
     transition-duration: 0s !important;
 }
 
+a {
+    text-decoration: none !important;
+}

@@ -25,7 +25,11 @@
 
 .movie-item__label {
     width: 100%;
-    pointer-events: none;
+    color: var(--black);
+
+    a {
+        color: inherit;
+    }
 }
 
 .movie-item__delete-btn {

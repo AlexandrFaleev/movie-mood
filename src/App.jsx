@@ -1,9 +1,15 @@
-import {MoodMovies} from "./components/MoodMovies/MoodMovies.jsx";
+import { Routes, Route } from "react-router-dom";
+import { MoodMoviesPage } from "./pages/MoodMoviesPage.jsx";
+import { DetailPage } from "./pages/DetailPage.jsx";
+
 
 function App() {
 
   return (
-    <MoodMovies />
+    <Routes>
+        <Route path="/" element={<MoodMoviesPage/>} />
+        <Route path="/movie/:id" element={<DetailPage/>} />
+    </Routes>
   )
 }
 

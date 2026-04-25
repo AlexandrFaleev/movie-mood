@@ -1,4 +1,5 @@
 import './MovieItem.css'
+import {Link} from "react-router-dom";
 
 export const MovieItem = (props) => {
     const {
@@ -17,13 +18,15 @@ export const MovieItem = (props) => {
                 type="checkbox"
                 className="movie-item__checkbox"
                 checked={hasWatched}
-                onChange={() => onStatusChange(id)}
+                onChange={() => onStatusChange(id, !hasWatched)}
             />
             <label
                 htmlFor={id}
                 className="movie-item__label"
             >
-                {title}
+                <Link to={`/movie/${id}`} >
+                    {title}
+                </Link>
             </label>
            <button
                type="button"
